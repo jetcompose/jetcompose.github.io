@@ -9,32 +9,59 @@
 
 
     <style>
+        ul {
+            color: #84c754;
+        }
+
+        h2,
+        h4,
+        h5 {
+            color: #84c754;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
         body {
+
+            background-color: black;
             font-family: Arial, Helvetica, sans-serif;
-            margin-left: 2%;
-            margin-right: 2%;
+            margin-left: 3%;
+            margin-right: 3%;
         }
 
         .navbar {
             overflow: hidden;
-            background-color: #333;
+            background-color: #84c754;
         }
 
         .code_box {
+            font-style: normal;
+            font-family: 'Courier New', Courier, monospace;
             font-size: medium;
-            color: #000;
-            background-color: #aaa;
+            color: white;
+            background-color: #111;
             align-items: center;
             padding: 0.9%;
             text-align: justify;
         }
 
         p {
-            color: black;
+            font-style: normal;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: medium;
+            color: #84c754;
             font-size: 17px;
         }
-        .notes{
+
+        .notes {
+            font-style: normal;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: smaller;
+            color: #84c754;
             font-size: 12px;
+        }
+
+        .wish {
+            color: magenta;
         }
     </style>
 
@@ -42,7 +69,7 @@
 
 <body>
 
-    <h2>Compose support in legacy app.</h2>
+    <h2>Compose support in legacy/Existing app.</h2>
 
 
     <h4>Minimum criteria:</h4>
@@ -97,34 +124,36 @@
     </p>
     </p>
     <h5>Step 1.2:</h5>
-    You need to be in same file add below dependencies to <code>dependencies</code> closure.
+    <p> You need to be in same file add below dependencies to <code>dependencies</code> closure.</p>
     <p>
     <div class="code_box">
         <pre>
                 <code>
-                        dependencies {
+                        <i>
+                            dependencies {
 
-                            //for material 3 design
-                        <strong>//implementation 'androidx.compose.material3:material3'</strong>                            
-                            //for material 2 design
-                        <strong>implementation 'androidx.compose.material:material:1.2.1'</strong>                            
-                            //for foundation compose ui
-                        <strong>implementation 'androidx.compose.foundation:foundation:1.2.1'</strong>                            
-                            //for input and measurement/layout
-                        <strong>implementation 'androidx.compose.ui:ui:1.2.1'</strong>                            
-                            //for preview tooling
-                        <strong>implementation 'androidx.compose.ui:ui-tooling-preview:1.2.1'</strong>
-                        <strong>debugImplementation 'androidx.compose.ui:ui-tooling:1.2.1'</strong>
-                            //for lifecycle viewmodel.
-                        <strong>implementation "androidx.lifecycle:lifecycle-viewmodel-compose:2.5.1"</strong>
-
-                    }
+                                //for material 3 design
+                            <strong>//implementation 'androidx.compose.material3:material3'</strong>                            
+                                //for material 2 design
+                            <strong>implementation 'androidx.compose.material:material:1.2.1'</strong>                            
+                                //for foundation compose ui
+                            <strong>implementation 'androidx.compose.foundation:foundation:1.2.1'</strong>                            
+                                //for input and measurement/layout
+                            <strong>implementation 'androidx.compose.ui:ui:1.2.1'</strong>                            
+                                //for preview tooling
+                            <strong>implementation 'androidx.compose.ui:ui-tooling-preview:1.2.1'</strong>
+                            <strong>debugImplementation 'androidx.compose.ui:ui-tooling:1.2.1'</strong>
+                                //for lifecycle viewmodel.
+                            <strong>implementation "androidx.lifecycle:lifecycle-viewmodel-compose:2.5.1"</strong>
+    
+                        }
+                        </i>
                 </code>
             </pre>
     </div>
     </p>
 
-    <p>Sync your gradle files and start composing ui, Happy Composing!</p>
+    <p>Sync your gradle files and start composing ui, <strong class="wish">Happy Composing!</strong></p>
 
 </body>
 
