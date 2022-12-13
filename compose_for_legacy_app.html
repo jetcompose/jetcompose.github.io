@@ -1,25 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Compose support in existing app</title>
 </head>
+
 <body>
 
     <h2>Compose support in legacy app.</h2>
 
 
-    <h4>minimum criteria:</h4>
+    <h4>Minimum criteria:</h4>
     <p>
-        We can add the support for Jetpack compose in existing android projects, 
+        We can add the support for Jetpack compose in existing android projects,
         for this below are minimum criteria must be matched by your existing app:
     </p>
     <ul>
-        <li>minSDK should be 21 or higher</li>
-        <li>App should have kotlin language support, the reason is Compose function are only works with kotlin files.</li>
+        <li><b>minSDK</b> should be <b>21</b> or higher</li>
+        <li>App should have <b>kotlin language support</b>, the reason is Compose function are only works with kotlin
+            files.</li>
     </ul>
 
+
+    <h4>Step 1:</h4>
+    <p>
+        Once you have minimum criteria for your android project first thing is you need to add few definitions to your
+        module level <b><code>build.gradle</code></b> file.
+        i.e. <code>app/build.gradle</code>.
+    </p>
+    <h5>Step 1.1:</h5>
+    <p>
+    <div class="code_box">
+        <pre>
+                    <code>
+                        <i>
+                            //compose definitions for build configuration
+                            android{
+                                ...
+                                buildFeatures{
+                                    //setting true enables the Compose functionality.
+                                    <strong>compose true</strong>
+                                }
+    
+                                ... 
+    
+                                composeOptions{
+                                    //as a legacy app we need to explicitly mention the Kotlin compiler for compose extension
+                                    //versions of the kotlin extension compiler is to map with version of kotlin language used.
+                                    //refer here for mapping with compiler version <-> kotlin language.
+                                    //https://developer.android.com/jetpack/androidx/releases/compose-kotlin#pre-release_kotlin_compatibility
+                                    <strong>kotlinCompilerExtensionVersion = "1.3.2"</strong>
+                                }
+                            }
+                        </i>
+                    </code>
+                </pre>
+    </div>
+    <strong>Note:</strong> <i>You need to match the kotlin compose compiler version and kotlin language version</i>
+    </p>
+    <h5>Step 1.2:</h5>
+    You need to be in same file add below dependencies to <code>dependencies</code> closure.
+    <p>
+    <div class="code_box">
+        <pre>
+                <code>
+                        dependencies {
+
+                            //for material 3 design
+                        <strong>//implementation 'androidx.compose.material3:material3'</strong>                            
+                            //for material 2 design
+                        <strong>implementation 'androidx.compose.material:material:1.2.1'</strong>                            
+                            //for foundation compose ui
+                        <strong>implementation 'androidx.compose.foundation:foundation:1.2.1'</strong>                            
+                            //for input and measurement/layout
+                        <strong>implementation 'androidx.compose.ui:ui:1.2.1'</strong>                            
+                            //for preview tooling
+                        <strong>implementation 'androidx.compose.ui:ui-tooling-preview:1.2.1'</strong>
+                        <strong>debugImplementation 'androidx.compose.ui:ui-tooling:1.2.1'</strong>
+                            //for lifecycle viewmodel.
+                        <strong>implementation "androidx.lifecycle:lifecycle-viewmodel-compose:2.5.1"</strong>
+
+                    }
+                </code>
+            </pre>
+    </div>
+    </p>
+
+    <p>Sync your gradle files and start composing ui, Happy Composing!</p>
+
 </body>
+
 </html>
