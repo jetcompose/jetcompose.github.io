@@ -1,0 +1,82 @@
+h1,
+h2,
+h3,
+h4,
+h5 {
+    color: #84c754;
+}
+
+ul {
+    color: #84c754;
+}
+
+.main_content {
+    margin-left: 120px;
+    margin-right: 120px;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    background-color: black;
+}
+
+a {
+    color: white;
+}
+
+.navbar {
+    background-color: #111;
+    overflow: hidden;
+    border: none;
+    padding: 12px;
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.navbar a {
+    color: white;
+    padding: 14px 16px;
+    text-align: center;
+    float: left;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: #84c754;
+    color: white;
+}
+
+p {
+    font-style: normal;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
+    color: #84c754;
+    font-size: 17px;
+}
+
+.notes {
+    font-style: normal;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: smaller;
+    color: #84c754;
+    font-size: 12px;
+}
+
+.wish {
+    color: magenta;
+}
+
+.code_box {
+    font-style: normal;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
+    color: white;
+    background-color: #111;
+    align-items: center;
+    padding: 0.9%;
+    text-align: justify;
+    word-spacing: normal;
+
+}
