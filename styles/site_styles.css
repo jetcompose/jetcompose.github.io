@@ -80,3 +80,10 @@ p {
     word-spacing: normal;
 
 }
+
+.nav_logo{
+    height: 40x;
+    width: 40px;
+    float: right;
+    align-self: center;
+}
