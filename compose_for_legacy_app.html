@@ -4,7 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="How to add support for Jetpack compose in existing android project.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Jameer Mulani">
+    <meta name="author_desc" content="Sr Android Developer">
+    <meta name="keywords" content="Jetpack Compose, Compose, Android Studio, Android Project, Android App, Android">
     <title>Compose support in existing app</title>
 
 
@@ -13,7 +17,9 @@
             color: #84c754;
         }
 
+        h1,
         h2,
+        h3,
         h4,
         h5 {
             color: #84c754;
@@ -42,6 +48,8 @@
             align-items: center;
             padding: 0.9%;
             text-align: justify;
+            word-spacing: normal;
+
         }
 
         p {
@@ -69,31 +77,33 @@
 
 <body>
 
-    <h2>Compose support in legacy/Existing app.</h2>
+    <h1>Compose support in legacy/Existing app.</h2>
 
 
-    <h4>Minimum criteria:</h4>
-    <p>
-        We can add the support for Jetpack compose in existing android projects,
-        for this below are minimum criteria must be matched by your existing app:
-    </p>
-    <ul>
-        <li><b>minSDK</b> should be <b>21</b> or higher</li>
-        <li>App should have <b>kotlin language support</b>, the reason is Compose function are only works with kotlin
-            files.</li>
-    </ul>
+        <h3>Minimum criteria:</h3>
+        <p>
+            We can add the support for Jetpack compose in existing android projects,
+            for this below are minimum criteria must be matched by your existing app:
+        </p>
+        <ul>
+            <li><b>minSDK</b> should be <b>21</b> or higher</li>
+            <li>App should have <b>kotlin language support</b>, the reason is Compose function are only works with
+                kotlin
+                files.</li>
+        </ul>
 
 
-    <h4>Step 1:</h4>
-    <p>
-        Once you have minimum criteria for your android project first thing is you need to add few definitions to your
-        module level <b><code>build.gradle</code></b> file.
-        i.e. <code>app/build.gradle</code>.
-    </p>
-    <h5>Step 1.1:</h5>
-    <p>
-    <div class="code_box">
-        <pre>
+        <h4><u>Step 1:</u></h4>
+        <p>
+            Once you have minimum criteria for your android project first thing is you need to add few definitions to
+            your
+            module level <b><code>build.gradle</code></b> file.
+            i.e. <code>app/build.gradle</code>.
+        </p>
+        <h5><u>Step 1.1:</u></h5>
+        <p>
+        <div class="code_box">
+            <pre>
                 <code>
                         <i>
                             android{
@@ -118,16 +128,17 @@
                         </i>
                 </code>
             </pre>
-    </div>
-    <p class="notes"> <strong>Note:</strong> <i>You need to match the kotlin compose compiler version and kotlin
-            language version, refer the link mentioned into the comment.</i>
-    </p>
-    </p>
-    <h5>Step 1.2:</h5>
-    <p> You need to be in same file add below dependencies to <code>dependencies</code> closure.</p>
-    <p>
-    <div class="code_box">
-        <pre>
+        </div>
+        <p class="notes"> <strong><u>Note:</u></strong> <i>You need to match the kotlin compose compiler version and
+                kotlin
+                language version, refer the link mentioned into the comment.</i>
+        </p>
+        </p>
+        <h5><u>Step 1.2:</u></h5>
+        <p> You need to be in same file add below dependencies to <code>dependencies</code> closure.</p>
+        <p>
+        <div class="code_box">
+            <pre>
                 <code>
                         <i>
                             dependencies {
@@ -150,10 +161,10 @@
                         </i>
                 </code>
             </pre>
-    </div>
-    </p>
+        </div>
+        </p>
 
-    <p>Sync your gradle files and start composing ui, <strong class="wish">Happy Composing!</strong></p>
+        <p>Sync your gradle files and start composing ui, <strong class="wish">Happy Composing!</strong></p>
 
 </body>
 
