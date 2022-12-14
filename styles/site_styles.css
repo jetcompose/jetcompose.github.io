@@ -6,6 +6,11 @@ h5 {
     color: #84c754;
 }
 
+b{
+    color: #bbb;
+    font-weight: 600;
+}
+
 ul {
     color: #84c754;
 }
@@ -71,7 +76,7 @@ p {
 .code_box {
     font-style: normal;
     font-family: 'Courier New', Courier, monospace;
-    font-size: medium;
+    font-size: 15px;
     color: white;
     background-color: #111;
     align-items: center;
