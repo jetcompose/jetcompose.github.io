@@ -101,6 +101,8 @@ p {
     background-color: inherit;
     text-align: center;
     position: relative;
+    background: linear-gradient(135deg, rgba(2,0,36,1) 0%, rgba(84,199,115,1) 57%, rgba(0,212,255,1) 100%);
+
 }
 
 .card_item img{
@@ -114,6 +116,8 @@ p {
     width: auto;
     text-align: center;
     display: block;
+    color: white;
+    font-weight: 600;
 }
 
 .home_topic_grid{
