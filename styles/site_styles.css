@@ -126,3 +126,13 @@ p {
 .home_topic_grid p{
     width: auto;
 }
+
+footer{
+    text-align: center;
+    background-color: inherit;
+    color: magenta;
+}
+
+footer a{
+    color: magenta;
+}
