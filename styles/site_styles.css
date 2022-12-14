@@ -92,3 +92,37 @@ p {
     float: right;
     align-self: center;
 }
+
+.card_item{
+    width: 300px;
+    height: 250px;
+    border: 3px solid violet; 
+    padding: 10px;
+    background-color: inherit;
+    text-align: center;
+    position: relative;
+}
+
+.card_item img{
+    width: 200px;
+    height: 200px;
+    float: top;
+    align-self: center;
+}
+
+.card_item label a{
+    width: auto;
+    text-align: center;
+    display: block;
+}
+
+.home_topic_grid{
+    display: grid;
+    column-gap: 10px;
+    row-gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.home_topic_grid p{
+    width: auto;
+}
