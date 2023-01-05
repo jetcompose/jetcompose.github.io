@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="How to add support for Jetpack compose in existing android project.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Jameer Mulani">
+    <meta name="author_desc" content="Sr Android Developer">
+    <meta name="keywords" content="Jetpack Compose, Compose, Android Studio, Android Project, Android App, Android">
+    <title>Compose support in existing app</title>
+    <link rel="stylesheet" href="./styles/site_styles.css">
+
+</head>
+
+<body>
+
+    <!-- top nav bar -->
+    <div class="navbar">
+        <a href="./index.html" class="menu_home">Home</a>
+        <a href="">Jetpack Compose</a>
+        <img src="./assets/images/jetpack compose icon.png" alt="logo" , title="Jetpack compose logo" class="nav_logo">
+    </div>
+
+    <div class="main_content">
+        <h1>How to WRAP_CONTENT Composable ui.</h2>
+
+
+            <div>
+                <p>
+                    In Jetpack Compose, you can use the <code>Modifier.wrapContent</code> function to specify that a composable should be sized to fit its content. This is similar to the <code>wrap_content</code> attribute in Android's XML layouts.
+                </p>
+
+                <p>
+                    Here's an example of how to use <code>Modifier.wrapContent</code>:
+                </p>
+
+                <div class="code_box">
+                    <pre>
+                        <code>
+                                <i>
+                                    Box(modifier = Modifier.wrapContent()) {
+                                        // Composables here
+                                    }                                    
+                                </i>
+                        </code>
+                    </pre>
+                </div>
+
+                <p>
+                    This will cause the <code>Box</code> composable to be sized to fit the content inside it. The <code>Box</code> composable is a container that can hold other composables, and the <code>wrapContent</code> modifier will cause it to be sized to fit the composables inside it.
+                </p>
+
+                <br>
+                <p>
+                    You can use <code>Modifier.wrapContent</code> with any composable that has a size, such as a <code>Text</code> composable or an <code>Image</code> composable.
+                </p>
+
+                <p>
+                    Here's an example of using <code>Modifier.wrapContent</code> with a <code>Text</code> composable:
+                </p>
+
+                <div class="code_box">
+                    <pre>
+                        <code>
+                                <i>
+                                    Text(
+                                        text = "Some text",
+                                        modifier = Modifier.wrapContent(),
+                                        style = TextStyle(fontSize = 24.sp)
+                                    )                                  
+                                </i>
+                        </code>
+                    </pre>
+                </div>
+
+                <p>
+                    This will cause the <code>Text</code> composable to be sized to fit the text inside it, with a font size of 24 sp.
+                </p>
+                <br>
+
+                <p>
+                    You can also use <code>Modifier.wrapContentSize</code> to specify that a composable should be sized to fit its content in both dimensions. This is similar to the <code>wrap_content</code> attribute in Android's XML layouts, but it applies to both the width and the height.
+                </p>
+
+                <p>
+                    Here's an example of using <code>Modifier.wrapContentSize</code> with a <code>Box</code> composable:
+                </p>
+
+                <div class="code_box">
+                    <pre>
+                        <code>
+                                <i>
+                                    Box(modifier = Modifier.wrapContentSize()) {
+                                        // Composables here
+                                    }                                                                     
+                                </i>
+                        </code>
+                    </pre>
+                </div>
+
+                <p>
+                    This will cause the <code>Box</code> composable to be sized to fit the content inside it in both the width and the height.
+                </p>
+
+            </div>
+
+            <p><strong class="wish">Happy Composing!</strong></p>
+
+    </div>
+
+
+    <footer>
+        <p> Author : <a href="https://in.linkedin.com/in/jameermulani?trk=profile-badge" target="_blank">Jameer
+                Mulani</a></p>
+    </footer>
+
+</body>
+
+</html>

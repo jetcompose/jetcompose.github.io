@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="How to add support for Jetpack compose in existing android project.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Jameer Mulani">
+    <meta name="author_desc" content="Sr Android Developer">
+    <meta name="keywords" content="Jetpack Compose, Compose, Android Studio, Android Project, Android App, Android">
+    <title>Compose support in existing app</title>
+    <link rel="stylesheet" href="./styles/site_styles.css">
+
+</head>
+
+<body>
+
+    <!-- top nav bar -->
+    <div class="navbar">
+        <a href="./index.html" class="menu_home">Home</a>
+        <a href="">Jetpack Compose</a>
+        <img src="./assets/images/jetpack compose icon.png" alt="logo" , title="Jetpack compose logo" class="nav_logo">
+    </div>
+
+    <div class="main_content">
+        <h1>Introducing <code>Box</code> Composable.</h2>
+
+
+
+            <div>
+                <p>
+                    In Jetpack Compose, the <code>Box</code> composable is a container that can hold other composables. It has a size, which can be specified using layout modifiers such as <code>Modifier.preferredSize</code> or <code>Modifier.wrapContent</code>.
+                </p>
+                <p>
+                    Here's an example of how to use the <code>Box</code> composable:
+                </p>
+
+                <div class="code_box">
+                    <pre>
+                        <code>
+                                <i>
+                                    Box(modifier = Modifier.preferredSize(100.dp)) {
+                                        // Composables here
+                                    }                                                                       
+                                </i>
+                        </code>
+                    </pre>
+                </div>
+
+                <p>
+                    This will create a <code>Box</code> composable with a size of 100 dp. The composables inside the <code>Box</code> will be laid out according to the default layout algorithm for the <code>Box</code> composable.
+                </p>
+                <br>
+                <p>
+                    You can customize the appearance of the <code>Box</code> composable by setting various attributes, such as the <code>backgroundColor</code> and <code>border</code>.
+                </p>
+                <p>
+                    Here's an example of a <code>Box</code> composable with customized appearance:
+                </p>
+
+                <div class="code_box">
+                    <pre>
+                        <code>
+                                <i>
+                                    Box(
+                                            modifier = Modifier.preferredSize(100.dp),
+                                            backgroundColor = Color.Blue,
+                                            border = Border(1.dp, Color.Red)) {
+                                            // Composables here
+                                    }                                                                   
+                                </i>
+                        </code>
+                    </pre>
+                </div>
+                <p>
+                    This will create a <code>Box</code> composable with a blue background and a red border with a thickness of 1 dp. You can use any valid color value and border thickness value in the backgroundColor and border attributes.
+                </p>
+
+                <p>
+                    You can use the <code>Box</code> composable to create simple layouts and containers for your UI. It is often used in conjunction with other layout composables, such as <code>Column</code> and <code>Row</code>, to create more complex layouts.
+                </p>
+
+                <hr>
+
+                <h2>
+                    Default Layout algorithm:
+                </h2>
+
+                <p>
+                    The default layout algorithm for the <code>Box</code> composable is to stack the composables inside it vertically, from top to bottom. This means that the first composable will be placed at the top of the Box, the second composable will be placed below it, and so on.
+                </p>
+                <p>
+                    Here's an example of the default layout algorithm for the <code>Box</code> composable:
+                </p>
+                <div class="code_box">
+                    <pre>
+                        <code>
+                                <i>
+                                    Box(modifier = Modifier.preferredSize(100.dp)) {
+                                        Text("Text 1")
+                                        Text("Text 2")
+                                        Image(asset = imageResource(R.drawable.my_image))
+                                    }                                                                                                   
+                                </i>
+                        </code>
+                    </pre>
+                </div>
+
+                <p>
+                    This will create a <code>Box</code> composable with three composables inside it: a <code>Text</code> composable with the text "Text 1", a <code>Text</code> composable with the text "Text 2", and an <code>Image</code> composable. The Text composables will be stacked vertically, with the first one at the top and the second one below it. The <code>Image</code> composable will be placed below the second <code>Text</code> composable.
+                </p>
+                <br>
+                <p>
+                    You can customize the layout of the composables inside the <code>Box</code> composable by using layout composables, such as <code>Row</code> and <code>Column</code>.
+                </p>
+                <p>
+                    Here's an example of a <code>Box</code> composable with a <code>Row</code> composable inside it:
+                </p>
+                <div class="code_box">
+                    <pre>
+                        <code>
+                                <i>
+                                    Box(modifier = Modifier.preferredSize(100.dp)) {
+                                        Row {
+                                            Text("Text 1")
+                                            Text("Text 2")
+                                        }
+                                        Image(asset = imageResource(R.drawable.my_image))
+                                    }                                                                     
+                                </i>
+                        </code>
+                    </pre>
+                </div>
+                <p>
+                    This will create a <code>Box</code> composable with a <code>Row</code> composable and an <code>Image</code> composable inside it. The <code>Row</code> composable will contain two <code>Text</code> composables, which will be laid out horizontally next to each other. The <code>Image</code> composable will be placed below the <code>Row</code> composable.
+                </p>
+                <br>
+                <p>
+                    You can use any combination of composables and layout composables to create the desired layout inside the <code>Box</code> composable.
+                </p>
+
+            </div>
+
+            <p><strong class="wish">Happy Composing!</strong></p>
+
+    </div>
+
+
+    <footer>
+        <p> Author : <a href="https://in.linkedin.com/in/jameermulani?trk=profile-badge" target="_blank">Jameer
+                Mulani</a></p>
+    </footer>
+
+</body>
+
+</html>

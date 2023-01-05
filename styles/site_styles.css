@@ -74,16 +74,14 @@ p {
 }
 
 .code_box {
-    font-style: normal;
     font-family: 'Courier New', Courier, monospace;
     font-size: 15px;
     color: white;
     background-color: #111;
     align-items: center;
-    padding: 0.9%;
-    text-align: justify;
+    justify-content: center;
     word-spacing: normal;
-
+    margin: 0 auto;
 }
 
 .code_box code{
@@ -91,7 +89,7 @@ p {
 }
 
 code{
-    color: blue;
+    color: magenta;
     font-family: monospace;
 }
 
