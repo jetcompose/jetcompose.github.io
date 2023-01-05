@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="How to add support for Jetpack compose in existing android project.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Jameer Mulani">
+    <meta name="author_desc" content="Sr Android Developer">
+    <meta name="keywords" content="Jetpack Compose, Compose, Android Studio, Android Project, Android App, Android">
+    <title>Compose support in existing app</title>
+    <link rel="stylesheet" href="./styles/site_styles.css">
+
+</head>
+
+<body>
+
+    <!-- top nav bar -->
+    <div class="navbar">
+        <a href="./index.html" class="menu_home">Home</a>
+        <a href="">Jetpack Compose</a>
+        <img src="./assets/images/jetpack compose icon.png" alt="logo" , title="Jetpack compose logo" class="nav_logo">
+    </div>
+
+    <div class="main_content">
+        <h1>Images in Jetpack compose</h2>
+
+            <div>
+                <p>
+                    To use an image in Jetpack Compose, you can use the <code>Image</code> composable. The <code>Image</code> composable allows you to specify the source of the image and customize the appearance of the image.
+                </p>
+
+                <p>Here's an example of how to use the <code>Image</code> composable to display an image from a drawable resource:</p>
+
+                <div class="code_box">
+                    <pre>
+                        <code>
+                                <i>
+                                    Image(
+                                        asset = imageResource(R.drawable.my_image),
+                                        contentScale = ContentScale.Crop
+                                    )
+                                </i>
+                        </code>
+                    </pre>
+                </div>
+
+
+                <p>
+                    This will display the image located at <code>R.drawable.my_image</code> in the drawable resources folder of your app. The <code>contentScale</code> parameter specifies how the image should be scaled to fit the available space. In this example, the image will be cropped to fit the available space.
+                </p>
+            </div>
+
+            <!-- image with file -->
+            <div>
+                <p>
+                    You can also use the Image composable to display an image from a file or URL:
+                </p>
+
+                <p>
+                    <div class="code_box">
+                        <pre>
+                            <code>
+                                    <i>
+                                        Image(
+                                                file = File(imageFilePath),
+                                                contentScale = ContentScale.Crop
+                                            )
+                                    </i>
+                            </code>
+                        </pre>
+                    </div>
+                </p>
+
+               <p>
+                <div class="code_box">
+                    <pre>
+                        <code>
+                                <i>
+                                    Image(
+                                            url = imageUrl,
+                                            contentScale = ContentScale.Crop
+                                        )
+                                </i>
+                        </code>
+                    </pre>
+                </div>
+               </p>
+
+                <p>
+                    In these examples, the <code>file</code> parameter specifies the path to the image file, and the <code>url</code> parameter specifies the <code>URL</code> of the image.
+                </p>
+                
+            </div>
+
+            <!-- alpha tint -->
+            <div>
+                <p>
+                    You can customize the appearance of the image by setting various attributes, such as the <code>alpha</code> and <code>tint</code>.
+                </p>
+
+                <p>
+                    Here's an example of an image with customized appearance:
+                </p>
+
+                <div class="code_box">
+                    <pre>
+                        <code>
+                                <i>
+                                    Image(
+                                        asset = imageResource(R.drawable.my_image),
+                                        alpha = 0.5f,
+                                        tint = Color.Red,
+                                        contentScale = ContentScale.Crop
+                                    )
+                                </i>
+                        </code>
+                    </pre>
+                </div>
+
+                <p>
+                    This will display the image with an alpha value of 0.5 (semi-transparent) and a red tint. You can use any valid alpha value and color value in the <code>alpha</code> and <code>tint</code> attributes.
+                </p>
+
+            </div>
+
+            <p><strong class="wish">Happy Composing!</strong></p>
+
+    </div>
+
+
+    <footer>
+        <p> Author : <a href="https://in.linkedin.com/in/jameermulani?trk=profile-badge" target="_blank">Jameer
+                Mulani</a></p>
+    </footer>
+
+</body>
+
+</html>
