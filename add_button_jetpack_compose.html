@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="How to add support for Jetpack compose in existing android project.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Jameer Mulani">
+    <meta name="author_desc" content="Sr Android Developer">
+    <meta name="keywords" content="Jetpack Compose, Compose, Android Studio, Android Project, Android App, Android">
+    <title>Compose support in existing app</title>
+    <link rel="stylesheet" href="./styles/site_styles.css">
+
+</head>
+
+<body>
+
+    <!-- top nav bar -->
+    <div class="navbar">
+        <a href="./index.html" class="menu_home">Home</a>
+        <a href="">Jetpack Compose</a>
+        <img src="./assets/images/jetpack compose icon.png" alt="logo" , title="Jetpack compose logo" class="nav_logo">
+    </div>
+
+    <div class="main_content">
+        <h1>Button in Jetpack compose</h2>
+
+            <div>
+                <p>
+                    To add a button in Jetpack Compose, you can use the <code>Button</code> composable. The <code>Button</code> composable allows you to specify the text to be displayed on the button, as well as an action to be performed when the button is clicked. Here's an example of how to use the Button composable:
+                </p>
+
+                <div class="code_box">
+                    <pre>
+                        <code>
+                                <i>
+                                    Button(onClick = {
+                                        // Perform some action when the button is clicked
+                                    }) {
+                                        Text("Click me")
+                                    }
+                                </i>
+                        </code>
+                    </pre>
+                </div>
+                <p>
+                    The <code>onClick</code> parameter is a lambda function that specifies the action to be performed when the button is clicked. The lambda function can contain any code that you want to execute when the button is clicked.
+                </p>
+            </div>
+
+
+
+            <div>
+                <p>
+                    The <code>Text</code> composable inside the lambda function specifies the text to be displayed on the button. You can customize the appearance of the button by setting various attributes, such as the <code>color</code> and <code>fontSize</code>.
+                </p>
+
+                <p>Here's an example of a button with customized appearance:</p>
+
+                <div class="code_box">
+                    <pre>
+                        <code>
+                                <i>
+                                    Button(onClick = {
+                                        // Perform some action when the button is clicked
+                                    }, color = Color.Blue, fontSize = 16.sp) {
+                                        Text("Click me")
+                                    }
+                                </i>
+                        </code>
+                    </pre>
+                </div>
+
+            </div>
+
+            <div>
+                <p>
+                    You can also customize the appearance of the button by using the optional <code>modifier</code> parameter. For example, you can use the <code>background</code> modifier to set the background color of the button:
+                </p>
+                <div class="code_box">
+                    <pre>
+                        <code>
+                                <i>
+                                    Button(
+                                            onClick = {
+                                                // Add your code here to handle the click event
+                                            },
+                                            text = {
+                                                Text("Button text")
+                                            },
+                                            modifier = Modifier.background(color = Color.Red)
+                                        )
+                                </i>
+                        </code>
+                    </pre>
+                </div>
+                <p>This will create a red button with the text "Button text".
+            </div>
+
+            <p><strong class="wish">Happy Composing!</strong></p>
+
+    </div>
+
+
+    <footer>
+        <p> Author : <a href="https://in.linkedin.com/in/jameermulani?trk=profile-badge" target="_blank">Jameer
+                Mulani</a></p>
+    </footer>
+
+</body>
+
+</html>
